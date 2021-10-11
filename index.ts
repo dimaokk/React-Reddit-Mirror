@@ -41,7 +41,7 @@ interface IHomeTask {
 
 
 type MyPartial<T> = {
-    [N in keyof T]: T[N] extends object ? MyPartial<T[N]> : T[N]
+    [N in keyof T]?: T[N] extends object ? MyPartial<T[N]> : T[N]
 }
 
 const homeTask: MyPartial<IHomeTask> = {

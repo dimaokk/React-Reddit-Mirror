@@ -6,17 +6,15 @@ const path = require('path');
 
 const compiler = webpack(webpackConfig);
 
+const watching = compiler.watch({ }, (err) => { // [Stats Object](#stats-object)
+    console.log('err mb',err);
+  });
+  
+
 compiler.run((err)=>{
     if (err) {
         console.log('err', err)
     }
-
-    compiler.watch( {}, (err) => {
-        if (err) {
-            console.log('err', err)
-        }
-        console.log('All ooooooooooooooooooooooooooooooooooooooook' )
-    });
 
     nodemon({
         script:path.resolve(__dirname, '../dist/server/server.js'),

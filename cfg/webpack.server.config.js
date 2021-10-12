@@ -5,7 +5,7 @@ const { output } = require("../webpack.config");
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
-    target: "node",
+    target: 'node',
     mode: NODE_ENV ? NODE_ENV : "development",
     entry: path.resolve(__dirname, "../src/server/server.js"),
     output: {
@@ -17,25 +17,10 @@ module.exports = {
     },
     externals: [nodeExternals()],
     module: {
-        rules: [
-           
-            {
-                test: /\.css$/,
-                use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: {
-                                mode: "local",
-                                localIdentName:
-                                    "[name]__[local]--[hash:base64:5]",
-                            },
-                        },
-                    },
-                ],
-            },
-        ],
+        rules: [{
+            test: /\.[jt]sx?$/,
+            use: ['ts-loader']
+        }],
     },
     optimization: {
         minimize: false,

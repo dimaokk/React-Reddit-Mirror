@@ -1,9 +1,16 @@
-import * as React from "react";
+import { hot } from 'react-hot-loader/root'
+import * as React from 'react';
+import styles from './header.less'
 
-export function Header() {
+function Header() {
     return (
         <header>
-            <h1> Hello React'\; 45</h1>
+            <h1 className={styles.example}>Reddit a2 aaa ddddasdad</h1>
+            
+            <h1         >Reddit gdgg5 ddd</h1>
+            
         </header>
-    );
+    )
 }
+
+export default hot(Header)

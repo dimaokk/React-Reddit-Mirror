@@ -13,7 +13,7 @@ module.exports = {
         filename: "server.js",
     },
     resolve: {
-        extensions: ['.jsx', '.js', 'ts', 'tsx', '.json'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
     },
     externals: [nodeExternals()],
     module: {

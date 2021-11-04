@@ -14,7 +14,7 @@ function setupDevtool() {
 
 module.exports = {
   resolve: {
-    extensions: ['.jsx', '.js', 'ts', 'tsx', '.json'],
+    extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
     alias: {
       'react-dom': IS_DEV ? '@hot-loader/react-dom' : 'react-dom',
     },

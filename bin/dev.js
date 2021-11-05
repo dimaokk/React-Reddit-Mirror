@@ -30,7 +30,7 @@ hmrServer.listen(3001, () => {
 
 const compiler = webpack(webpackServerConfig);
 
-compiler.watch((error) => {
+compiler.watch({},(error) => {
     if (error) {
         console.log("Compilation failed: ", error);
     }

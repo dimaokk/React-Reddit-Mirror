@@ -7,11 +7,23 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-self["webpackHotUpdatereactjs"]("main",{},
+self["webpackHotUpdatereactjs"]("main",{
+
+/***/ "./src/utils/react/pickFromSynthetickEvent.tsx":
+/*!*****************************************************!*\
+  !*** ./src/utils/react/pickFromSynthetickEvent.tsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nde;\r\nfunction pickFromSynthetickEvent() {\r\n    return function (key) { return function (fn) { return function (e) { return fn(e.currentTarget[key]); }; }; };\r\n}\r\n\n\n//# sourceURL=webpack://reactjs/./src/utils/react/pickFromSynthetickEvent.tsx?");
+
+/***/ })
+
+},
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ /* webpack/runtime/getFullHash */
 /******/ (() => {
-/******/ 	__webpack_require__.h = () => ("f6664503fe2064c5a504")
+/******/ 	__webpack_require__.h = () => ("b6c974e97f988abf5833")
 /******/ })();
 /******/ 
 /******/ }

@@ -7,23 +7,26 @@ import { Layout } from "./shared/Layout/Layout";
 import CardsList from "./shared/CardsList/CardsList";
 
 import MyHooks from "./hook";
-import {getValue} from './utils/react/pickFromSynthetickEvent'
+import { getValue } from "./utils/react/pickFromSynthetickEvent";
+import MyList from "./shared/GenericList/GenericList";
+import { assignId, generateId } from "./utils/ts/generateRandomIndex";
+import { merge } from "./utils/ts/merge";
+
+const LIST = [{ value: "some" }, { value: "other" }].map(generateId);
 
 function App() {
-    const [isVisible, setIsVisible] = useState(false)
-    const [title, setTitle] = useState('')
-
     return (
         <Layout>
-            <Header /> 
+            <Header />
             <Content>
                 <CardsList />
-                <button onClick={()=> setIsVisible(!isVisible)}>Click Me pleas</button>
-                <input type="text" onChange={getValue(setTitle)} />
-                {isVisible && <MyHooks title={title} id='11' />}
+                <MyList
+                    
+                    list={LIST.map(merge({onClick: ()=> {console.log('click')}}))}
+                />
             </Content>
         </Layout>
     );
 }
 
-export default hot(App);
+export default hot(() => <App />);

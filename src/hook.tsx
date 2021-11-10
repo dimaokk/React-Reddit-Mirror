@@ -1,25 +1,44 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function MyHooks({title, id}: {title: string, id?: string}) {
+export default function MyHooks({ title, id }: { title: string; id?: string }) {
     // useEffect(()=>{
     //     console.log('Did')
-    //     console.log('Will')
+    //     console.log('WillUpdate')
     // })
 
-    useEffect(()=>{
-        console.log('Did')
-        return(
-            console.log('WillUnmount')
-        )
-    }, [])
+    // useEffect( () => {
+    //     console.log("Did");
+    //     return () => {
+    //         console.log("WillUnmount");
+    //     };
+    // }, []);
 
-    // useEffect(()=>{
-    //     console.log('compREcive', title)
-    //     console.log('Will')
-    // }, [title])
+    // useEffect(() => {
+    //     console.log("compRecive", title);
+    //     console.log("Will");
+    // }, [title]);
 
-    return(
-        <div>{title} {id}</div>
-    )
+
+    const [isMounted] = useInMounted();
+
+
+    useEffect( ()=> {
+        console.log('dada')
+    }, [isMounted])
+    return (
+        <div>
+            {title} {id}
+        </div>
+    );
+}
+
+function useInMounted() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect( () => {
+        setIsMounted (true);
+    }, []);
+
+    return [isMounted]
 }

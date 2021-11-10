@@ -3,22 +3,28 @@ import styles from "./GenericList.css";
 
 interface IItem {
     id: string;
-    value: string;
-    onClick: () => void;
+    text: string;
+    onClick: (id: string) => void;
+    className?: string;
+    As?: "a" | "li" | "button" | "div";
+    href?: string;
+    img?: string
 }
-
-interface IMyListProps {
+interface IGenericListProps {
     list: IItem[];
 }
 
-export default function MyList({ list }: IMyListProps) {
+export function GenericList({ list }: IGenericListProps) {
     return (
-        <ul>
-            {list.map((item, index) => (
-                <li onClick={item.onClick} key={item.id}>
-                    {item.value}
-                </li>
+        <>
+            {list.map(({ As = "div", text, onClick, className, id, href }) => (
+                <As
+                    className={className}
+                    onClick={() => onClick(id)}
+                    key={id}
+                    href={href}
+                >{text}</As>
             ))}
-        </ul>
+        </>
     );
 }

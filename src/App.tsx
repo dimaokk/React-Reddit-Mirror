@@ -8,22 +8,34 @@ import CardsList from "./shared/CardsList/CardsList";
 
 import MyHooks from "./hook";
 import { getValue } from "./utils/react/pickFromSynthetickEvent";
-import MyList from "./shared/GenericList/GenericList";
-import { assignId, generateId } from "./utils/ts/generateRandomIndex";
+import { GenericList } from "./shared/GenericList/GenericList";
+import {
+    assignId,
+    generateId,
+    generateRandomString,
+} from "./utils/ts/generateRandomIndex";
 import { merge } from "./utils/ts/merge";
 
-const LIST = [{ value: "some" }, { value: "other" }].map(generateId);
+import Dropdown from "./shared/Dropdown/Dropdown";
+
+const LIST = [{ text: "some" }, { text: "other" }, { text: "dsad" }].map(
+    generateId
+);
 
 function App() {
+    const [list, setList] = useState(LIST);
+    const handleItemClick = (id: string) => {
+        setList(list.filter((item) => item.id != id));
+    };
+    const handleAdd = () => {
+        setList(list.concat(generateId({ text: generateRandomString() })));
+    };
+
     return (
         <Layout>
             <Header />
             <Content>
                 <CardsList />
-                <MyList
-                    
-                    list={LIST.map(merge({onClick: ()=> {console.log('click')}}))}
-                />
             </Content>
         </Layout>
     );

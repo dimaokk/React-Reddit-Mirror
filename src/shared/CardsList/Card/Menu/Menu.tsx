@@ -39,6 +39,7 @@ export default function Menu () {
                 </button>}
                 >
                 <GenericList list={MENU.map(merge({onClick: handleClick}))} />
+                <button>закрыть</button>
                 </Dropdown>
                 
             </div>

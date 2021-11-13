@@ -5,6 +5,8 @@ import Card from "./Card/Card";
 function CardsList() {
     return(
         <ul className={styles.cardsList}>
+            <Card />
+            <Card /> 
             <Card /> 
         </ul>
     ) 

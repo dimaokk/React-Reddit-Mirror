@@ -1,23 +1,26 @@
 import React from "react";
-import styles from "./Text.css";
-import classNames from "classnames";
-import  {SaveIcon}  from "./SaveIcon";
+import IconsSVG from "./icons.svg";
+import {EIcons} from './iconsTypes'
 
-
-const ComponentIcon = {
-  save : <SaveIcon />
+interface IconsProp {
+    name: EIcons;
+    color?: any;
+    size?: number;
+    className?: string;
 }
 
-type ComponentIcon = typeof ComponentIcon[keyof typeof ComponentIcon]
-
-
-
-interface IIconProps {
-    name: ComponentIcon,
+function Icons({ name, color, size, className }: IconsProp) {
+    return (
+        <svg
+            className={`icon icon-${name} ${className}`}
+            fill={color}
+            stroke={color}
+            width={size}
+            height={size}
+        >
+            <use xlinkHref={`${IconsSVG}#icon-${name}`} />
+        </svg>
+    );
 }
 
-export function Icon ({name}:IIconProps) {
-   return(
-       {name}
-   )
-}
+export default Icons;

@@ -1,4 +1,4 @@
-export enum EIcons {
+export enum EIcon {
     block = "blockIcon",
     commets = "commetsIcon",
     menu = "menuIcon",

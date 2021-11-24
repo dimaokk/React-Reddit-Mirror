@@ -1,8 +1,8 @@
 import React from "react";
-import { BlockIcon } from "../../../../Icons/BlockIcon";
-import { WarningIcon } from "../../../../Icons/WarningIcon";
+import Icons from "../../../../Icons/Icon";
 import styles from "./MenuItemsList.css";
 import { EColor, Text } from "../../../../Text/Text";
+import { EIcon } from "../../../../Icons/iconsTypes";
 interface IMenuItemListProps {
     postId: string;
 }
@@ -11,7 +11,8 @@ export default function MenuItemsList({ postId }: IMenuItemListProps) {
     return (
         <ul className={styles.menuItemsList}>
             <li className={styles.menuItem} onClick={() => console.log(postId)}>
-                <BlockIcon />
+                <Icons name={EIcon.block} size={16} />
+                
                 <Text size={12} color={EColor.grey99}>
                     Скрыть
                 </Text>
@@ -19,28 +20,28 @@ export default function MenuItemsList({ postId }: IMenuItemListProps) {
             <div className={styles.divider} />
 
             <li className={styles.menuItem} onClick={() => console.log(postId)}>
-                <WarningIcon />
+                <Icons name={EIcon.warn} size={16} />
                 <Text size={12} color={EColor.grey99}>
                     Пожаловаться
                 </Text>
             </li>
             <div className={styles.divider} />
             <li className={styles.menuItem} onClick={() => console.log(postId)}>
-                <WarningIcon />
+                <Icons name={EIcon.warn} size={16} />
                 <Text size={12} color={EColor.grey99}>
                     Пожаловаться
                 </Text>
             </li>
             <div className={styles.divider} />
             <li className={styles.menuItem} onClick={() => console.log(postId)}>
-                <WarningIcon />
+                <Icons name={EIcon.warn} size={16} />
                 <Text size={12} color={EColor.grey99}>
                     Пожаловаться
                 </Text>
             </li>
             <div className={styles.divider} />
             <li className={styles.menuItem} onClick={() => console.log(postId)}>
-                <WarningIcon />
+                <Icons name={EIcon.warn} size={16} />
                 <Text size={12} color={EColor.grey99}>
                     Пожаловаться
                 </Text>

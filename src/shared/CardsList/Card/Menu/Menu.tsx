@@ -5,9 +5,9 @@ import { GenericList } from "../../../GenericList/GenericList";
 import { generateId } from "../../../../utils/ts/generateRandomIndex";
 import { merge } from "../../../../utils/ts/merge";
 import { EColor, Text } from "../../../Text/Text";
-
-import { MenuIcon } from "../../../Icons/MenuIcon";
+import Icons from "../../../Icons/Icon";
 import MenuItemsList from "./MenuItemsList/MenuItemsList";
+import { EIcon } from "../../../Icons/iconsTypes";
 
 export default function Menu() {
     return (
@@ -15,7 +15,7 @@ export default function Menu() {
             <Dropdown
                 button={
                     <button className={styles.menuButton}>
-                        <MenuIcon />
+                    <Icons name={EIcon.menu} size={16}/>            
                     </button>
                 }
             >

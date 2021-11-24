@@ -1,9 +1,9 @@
 import React from "react";
-import IconsSVG from "./icons.svg";
-import {EIcons} from './iconsTypes'
+import IconsSVG from "./iconns.svg";
+import {EIcon} from './iconsTypes'
 
 interface IconsProp {
-    name: EIcons;
+    name: EIcon;
     color?: any;
     size?: number;
     className?: string;

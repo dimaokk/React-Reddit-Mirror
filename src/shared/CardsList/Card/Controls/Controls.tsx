@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Controls.css";
-import {SaveIcon}  from "../../../Icons/SaveIcon";
-import { ShareIcon } from "../../../Icons/ShareIcon";
-import { ComentsIcon } from "../../../Icons/ComentsIcon";
-import { EIcon, Icon } from "../../../Icons/Icon";
+
+import { EIcon } from "../../../Icons/iconsTypes";
+import  Icons  from "../../../Icons/Icon";
 export default function Controls() {
     return (
         <div className={styles.controls}>
@@ -37,17 +36,17 @@ export default function Controls() {
             </div>
 
             <div className={styles.commentsButton}>
-                <ComentsIcon />
+                <Icons name={EIcon.commets} size={16}/>
 
                 <span className={styles.commentsNumber}>45</span>
             </div>
 
             <div className={styles.actions}>
                 <button className={styles.shareButton}>
-                    <Icon name={EIcon.save} /> 
+                    <Icons name={EIcon.share} size={16} /> 
                 </button>
                 <button className={styles.saveButton}>
-                    <SaveIcon />
+                    <Icons name={EIcon.save} size={16} />
                 </button>
             </div>
         </div>

@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "env NODE_ENV=development node ./bin/dev.js",
+    "dev": "env NODE_ENV=development CLIENT_ID=hz57DUl3bOas7s-iDZE9ww node ./bin/dev.js",
     "test": "jest"
   },
   "repository": {
@@ -51,6 +51,8 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2"
   }
 }

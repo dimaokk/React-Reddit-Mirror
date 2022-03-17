@@ -8,13 +8,13 @@
  */
 self["webpackHotUpdatereactjs"]("main",{
 
-/***/ "./src/shared/Icons/Icon.tsx":
-/*!***********************************!*\
-  !*** ./src/shared/Icons/Icon.tsx ***!
-  \***********************************/
+/***/ "./src/shared/CardsList/Card/Controls/Controls.tsx":
+/*!*********************************************************!*\
+  !*** ./src/shared/CardsList/Card/Controls/Controls.tsx ***!
+  \*********************************************************/
 /***/ (() => {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (15:4)\\nFile was processed with these loaders:\\n * ./node_modules/ts-loader/index.js\\nYou may need an additional loader to handle the result of these loaders.\\n|             react_1.default.createElement(\\\"use\\\", { xlinkHref: iconns_svg_1.default + \\\"#icon-\\\" + name }));\\n|     svg >\\n>     ;\\n|     ;\\n| }\");\n\n//# sourceURL=webpack://reactjs/./src/shared/Icons/Icon.tsx?");
+eval("throw new Error(\"Module parse failed: Unexpected token (31:4)\\nFile was processed with these loaders:\\n * ./node_modules/ts-loader/index.js\\nYou may need an additional loader to handle the result of these loaders.\\n|                             react_1.default.createElement(Icon_1.default, { name: iconsTypes_1.EIcon.save, size: 16 })))));\\n|     div >\\n>     ;\\n|     ;\\n| }\");\n\n//# sourceURL=webpack://reactjs/./src/shared/CardsList/Card/Controls/Controls.tsx?");
 
 /***/ })
 
@@ -22,7 +22,7 @@ eval("throw new Error(\"Module parse failed: Unexpected token (15:4)\\nFile was 
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ /* webpack/runtime/getFullHash */
 /******/ (() => {
-/******/ 	__webpack_require__.h = () => ("378d94a024ea7558b6bc")
+/******/ 	__webpack_require__.h = () => ("02811f9f1498cf0ae21a")
 /******/ })();
 /******/ 
 /******/ }

@@ -1,8 +1,8 @@
 export enum EIcon {
-    block = "blockIcon",
-    commets = "commetsIcon",
-    menu = "menuIcon",
-    save = "saveIcon",
-    share = "shareIcon",
-    warn = "warningIcon",
+    block = "block",
+    comments = "comments",
+    menu = "menu",
+    save = "save",
+    share = "share",
+    warn = "warning",
 }

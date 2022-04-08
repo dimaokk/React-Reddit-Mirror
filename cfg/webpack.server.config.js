@@ -21,6 +21,7 @@ module.exports = {
   externals: [nodeExternals()],
   module: {
     rules: [
+      
       {
         test: /\.[tj]sx?$/,
         use: ["ts-loader"],
